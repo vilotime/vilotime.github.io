@@ -64,6 +64,20 @@
 
 html { scroll-behavior: smooth; }
 
+/* 隐藏右侧滚动条的外观，但保留滚动能力：
+   滚轮 / 触控板 / 键盘 / 空格键 / 拖拽选中时的自动滚动都不受影响，只是不画那根条。
+   Firefox 用 scrollbar-width，Chromium / Safari 用 ::-webkit-scrollbar。 */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
