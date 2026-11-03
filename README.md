@@ -40,7 +40,7 @@
     "title": "时光不语 · 主页",
     "description": "时光不语 的个人主页 —— 头像、简介，以及各个分站点的入口。",
     "siteName": "时光不语",
-    "url": "https://vilotime.github.io/",
+    "url": "https://vilotime.cn/",
     "image": "assets/img/og-cover.png"
   },
   "avatar": {
@@ -173,7 +173,7 @@ https://github.com/<用户名>/<仓库名>/commits/<分支>.atom
 | `href` 写法 | 跳转方式 |
 | --- | --- |
 | 相对路径，如 `"blogs/"` 或 `"./blogs/"` | **同页跳转**（天然同站） |
-| 绝对地址，如 `"https://vilotime.github.io/blogs/"` | 新标签页（自动加 `target="_blank" rel="noopener noreferrer"`） |
+| 绝对地址，如 `"https://vilotime.cn/blogs/"` | 新标签页（自动加 `target="_blank" rel="noopener noreferrer"`） |
 | 绝对地址 + `"sameTab": true` | **同页跳转** |
 | 留空或 `#` | 占位卡片，点击只弹提示 |
 
@@ -258,7 +258,7 @@ python -m http.server 8000                      # 最省事的方式，也能用
   "title": "时光不语 · 主页",
   "description": "时光不语 的个人主页 —— 头像、简介，以及各个分站点的入口。",
   "siteName": "时光不语",
-  "url": "https://vilotime.github.io/",
+  "url": "https://vilotime.cn/",
   "image": "assets/img/og-cover.png"
 }
 ```
@@ -287,7 +287,7 @@ python -m http.server 8000                      # 最省事的方式，也能用
 当前的 `og-cover.png` 是 800×800，头像 + 名字 + 一句话，内容都留了 100px 以上边距，
 方形裁切不会切到东西。
 
-站点地址如果不是 `https://vilotime.github.io/`（比如仓库名不同、或者是项目页 `/repo/` 子路径），
+站点地址如果不是 `https://vilotime.cn/`（比如仓库名不同、或者是项目页 `/repo/` 子路径），
 改 `meta.url` 一处即可，封面地址会跟着变。
 
 ## 已实现的小细节

@@ -81,6 +81,11 @@ function metaHTML(m) {
   if (m.description) {
     lines.push('<meta name="description" content="' + S.esc(m.description) + '" />');
   }
+  /* 规范地址：换了域名之后特别重要，能让搜索引擎把新旧域名当成同一个页面，
+     而不是当成两份内容去抢排名（Bing 也会据此更新快照里的规范 URL）。 */
+  if (m.url) {
+    lines.push('<link rel="canonical" href="' + S.esc(m.url) + '" />');
+  }
 
   lines.push('<meta property="og:type" content="website" />');
   if (m.siteName) {
