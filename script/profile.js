@@ -159,6 +159,10 @@ function iconsHTML(v) {
     const attrs = ['rel="icon"', 'href="' + S.esc(v.ico.src) + '"'];
     if (v.ico.sizes) { attrs.push('sizes="' + S.esc(v.ico.sizes) + '"'); }
     lines.push('<link ' + attrs.join(' ') + ' />');
+
+    /* 再补一条老式写法。现代浏览器会忽略它（已经有上面的 rel="icon"），
+       但一些老解析器和部分爬虫只认 rel="shortcut icon"，给上没坏处。 */
+    lines.push('<link rel="shortcut icon" href="' + S.esc(v.ico.src) + '" />');
   }
 
   if (v.svg && v.svg.src) {
